@@ -22,7 +22,7 @@ const config = {
         })
       },
       {
-        test: /\.jpg$/,
+        test: /\.(jpe?g|png|gif|svg)$/,
         use: [
           {
             loader: 'url-loader',
@@ -30,7 +30,8 @@ const config = {
               limit: 10000,
               name: '[name].[hash:8].[ext]'
             }
-          }
+          },
+          'image-webpack-loader'
         ]
       }
     ]
